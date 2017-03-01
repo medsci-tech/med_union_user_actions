@@ -17,11 +17,10 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->comment('用户id');
-
-            $table->string('title')->unique()->comment('医生职称');
-            $table->string('office')->nullable()->comment('医生科室');
-
             $table->integer('hospital_id')->unsigned()->comment('医院id');
+
+            $table->string('title')->nullable()->comment('医生职称');
+            $table->string('office')->nullable()->comment('医生科室');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('md_users');
