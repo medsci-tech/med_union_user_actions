@@ -16,11 +16,11 @@ class CreateDoctorsTable extends Migration
         //
         Schema::create('doctors', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->comment('用户id');
 
             $table->string('title')->unique()->comment('医生职称');
             $table->string('office')->nullable()->comment('医生科室');
 
-            $table->integer('user_id')->unsigned()->comment('用户id');
             $table->integer('hospital_id')->unsigned()->comment('医院id');
             $table->timestamps();
 
