@@ -21,7 +21,7 @@ class CreateMdUserAddressesTable extends Migration
             $table->string('province')->nullable()->comment('省');
             $table->string('city')->nullable()->comment('市');
             $table->string('area')->nullable()->comment('区');
-            $table->boolean('if_prime')->nullable()->default(false)->comment('是否为默认地址');
+            $table->boolean('if_prime')->default(false)->nullable()->comment('是否为默认地址');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('md_users');
