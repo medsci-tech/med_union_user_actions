@@ -16,10 +16,10 @@ class CreateNovoVolunteersTable extends Migration
         //
         Schema::create('novo_volunteers', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->comment('用户id');
 
             $table->string('initial')->unique()->comment('代表initial');
             $table->string('region')->nullable()->comment('代表所在大区');
-            $table->integer('user_id')->unsigned()->comment('用户id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('md_users');
