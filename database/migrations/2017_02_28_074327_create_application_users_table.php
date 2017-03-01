@@ -36,8 +36,8 @@ class CreateApplicationUsersTable extends Migration
     {
         //
         Schema::table('application_users', function (Blueprint $table) {
-            $table->dropForeign('application_users_application_id_foreign');
             $table->dropForeign('application_users_user_id_foreign');
+            $table->dropForeign('application_users_application_id_foreign');
             $table->dropForeign('application_users_application_role_id_foreign');
         });
         Schema::dropIfExists('application_users');
