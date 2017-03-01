@@ -20,7 +20,8 @@ class CreateVideoLogsTable extends Migration
             $table->unsignedInteger('application_id')->comment('项目id');
 
             $table->string("video_name")->comment("视频名字");
-            $table->string("video_labels")->comment("视频标签, 可能含多个");
+            $table->string("video_labels")->nullable()->comment("视频标签, 可能含多个");
+            $table->string("video_abstract")->nullable()->comment("视频摘要");
 
             $table->dateTime("time_start")->comment("视频播放开始时间");
             $table->decimal("time_span", 10, 2)->comment("视频播放长度, 分钟单位");
