@@ -18,7 +18,7 @@ class CreateBasicLogsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id')->comment('用户id');
             $table->unsignedInteger('application_id')->comment('项目id');
-            $table->string("action_label")->comment("行为");
+            $table->string("action_label")->comment("行为 : 注册, 登陆");
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('md_users');
