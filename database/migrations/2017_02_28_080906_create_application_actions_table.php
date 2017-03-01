@@ -16,6 +16,7 @@ class CreateApplicationActionsTable extends Migration
         //
         Schema::create('application_actions', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('application_id')->comment('项目id');
             $table->string('action_ch')->comment('项目用户行为');
             $table->string('action_en')->comment('项目用户行为');
             $table->timestamps();
