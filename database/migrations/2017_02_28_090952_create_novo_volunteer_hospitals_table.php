@@ -16,7 +16,6 @@ class CreateNovoVolunteerHospitalsTable extends Migration
         //
         Schema::create('novo_volunteer_hospitals', function (Blueprint $table) {
             $table->increments('id');
-
             $table->integer('user_id')->unsigned()->comment('novo代表id');
             $table->integer('hospital_id')->unsigned()->comment('医院id');
             $table->integer('application_id')->unsigned()->comment('项目id');
