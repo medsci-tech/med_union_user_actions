@@ -22,7 +22,7 @@ class CreateMdUsersTable extends Migration
             $table->string('phone', 11)->unique()->comment('用户电话');
             $table->string('email')->unique()->nullable()->comment('用户邮箱');
 
-            $table->string('password', 60)->nullable()->comment('用户密码');
+            $table->string('password')->nullable()->comment('用户密码');
             $table->timestamps();
 
             $table->foreign('role_id')->references('id')->on('md_roles');
