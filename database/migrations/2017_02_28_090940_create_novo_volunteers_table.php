@@ -18,7 +18,7 @@ class CreateNovoVolunteersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->comment('用户id');
             $table->string('initial')->unique()->comment('代表initial');
-            $table->string('region')->nullable()->comment('代表所在大区');
+            $table->string('region')->comment('代表所在大区');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('md_users');
