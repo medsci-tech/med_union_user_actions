@@ -19,8 +19,8 @@ class CreateApplicationsTable extends Migration
             $table->string('name_en')->unique()->comment('项目名');
             $table->string('name_ch')->unique()->comment('项目名');
 
-            $table->dateTime("start_time")->comment('项目开始年份');
-            $table->dateTime("end_time")->comment('项目结束年份');
+            $table->dateTime("start_time")->comment('项目开始时间');
+            $table->dateTime("end_time")->comment('项目结束时间');
             $table->timestamps();
         });
     }
