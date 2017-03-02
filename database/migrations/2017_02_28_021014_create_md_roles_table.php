@@ -16,8 +16,8 @@ class CreateMdRolesTable extends Migration
         //
         Schema::create('md_roles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('role_en')->unique()->comment('用户角色');
-            $table->string('role_ch')->unique()->comment('用户角色');
+            $table->string('role_en', 30)->unique()->comment('用户角色');
+            $table->string('role_ch', 30)->unique()->comment('用户角色');
             $table->timestamps();
         });
     }

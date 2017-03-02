@@ -17,7 +17,7 @@ class CreateHospitalsTable extends Migration
         Schema::create('hospitals', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('name')->unique()->comment('医院名字');
+            $table->string('name', 60)->unique()->comment('医院名字');
             $table->string('type')->nullable()->comment('医院类型');
 
             $table->string('province')->nullable()->comment('省');
