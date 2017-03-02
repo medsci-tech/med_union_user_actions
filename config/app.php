@@ -179,7 +179,8 @@ return [
         // union user action
         Laravel\Passport\PassportServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
     ],
 
     /*
