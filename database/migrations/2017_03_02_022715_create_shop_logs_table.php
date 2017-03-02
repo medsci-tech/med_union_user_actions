@@ -20,6 +20,8 @@ class CreateShopLogsTable extends Migration
             $table->unsignedInteger('application_id')->comment('项目id');
 
             $table->string("product_name")->comment("商品名");
+            $table->string("product_labels")->nullable()->comment("商品标签, 可能含多个");
+            $table->string("product_abstract")->nullable()->comment("商品摘要");
             $table->decimal("money_cost", 10, 2)->comment("视频播放长度, 分钟单位");
             $table->timestamps();
 
