@@ -178,9 +178,11 @@ return [
         App\Providers\RouteServiceProvider::class,
         // union user action
         Laravel\Passport\PassportServiceProvider::class,
+        // tools
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -231,6 +233,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Passport' => Laravel\Passport\PassportServiceProvider::class,
         'Clockwork' => Clockwork\Support\Laravel\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
