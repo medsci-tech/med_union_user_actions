@@ -36,6 +36,6 @@ class CreateNovoVolunteersTable extends Migration
         Schema::table('novo_volunteers', function (Blueprint $table) {
             $table->dropForeign('novo_volunteers_user_id_foreign');
         });
-        Schema::drop('novo_volunteers');
+        Schema::dropIfExists('novo_volunteers');
     }
 }
