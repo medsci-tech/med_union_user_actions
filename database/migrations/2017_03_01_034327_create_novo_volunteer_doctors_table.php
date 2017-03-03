@@ -40,6 +40,6 @@ class CreateNovoVolunteerDoctorsTable extends Migration
             $table->dropForeign('novo_volunteer_doctors_doctor_id_foreign');
             $table->dropForeign('novo_volunteer_doctors_application_id_foreign');
         });
-        Schema::drop('novo_volunteer_doctors');
+        Schema::dropIfExists('novo_volunteer_doctors');
     }
 }

@@ -40,6 +40,6 @@ class CreateDoctorsTable extends Migration
             $table->dropForeign('doctors_user_id_foreign');
             $table->dropForeign('doctors_hospital_id_foreign');
         });
-        Schema::drop('doctors');
+        Schema::dropIfExists('doctors');
     }
 }

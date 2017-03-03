@@ -40,6 +40,6 @@ class CreateMdUsersTable extends Migration
         Schema::table('md_users', function(Blueprint $table) {
             $table->dropForeign('md_users_role_id_foreign');
         });
-        Schema::drop('md_users');
+        Schema::dropIfExists('md_users');
     }
 }

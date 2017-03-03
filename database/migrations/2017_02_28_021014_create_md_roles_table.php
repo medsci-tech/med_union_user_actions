@@ -30,6 +30,6 @@ class CreateMdRolesTable extends Migration
     public function down()
     {
         //
-        Schema::drop('md_roles');
+        Schema::dropIfExists('md_roles');
     }
 }
