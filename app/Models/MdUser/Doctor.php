@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\MdUser\Doctor whereUserId($value)
  * @mixin \Eloquent
  * @property-read \App\Models\MdUser\MdUser $mdUser
+ * @property-read \App\Models\Common\Hospital $hospital
  */
 class Doctor extends Model
 {

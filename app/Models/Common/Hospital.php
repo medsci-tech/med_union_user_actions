@@ -2,6 +2,7 @@
 
 namespace App\Models\Common;
 
+use App\Models\Application\Traits\BelongsToManyApplicationsTrait;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -24,9 +25,12 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Common\Hospital whereType($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Common\Hospital whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Application\Application[] $applications
  */
 class Hospital extends Model
 {
+    use BelongsToManyApplicationsTrait;
+
     /**
      * The attributes that are mass assignable.
      *

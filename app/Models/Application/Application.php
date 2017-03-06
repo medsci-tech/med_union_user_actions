@@ -2,6 +2,7 @@
 
 namespace App\Models\Application;
 
+use App\Models\Common\Traits\BelongsToManyHospitalsTrait;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -25,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Application extends Model
 {
+    use BelongsToManyHospitalsTrait;
     /**
      * The attributes that are mass assignable.
      *
