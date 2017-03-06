@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApplicationUsersTable extends Migration
+class CreateApplicationUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateApplicationUsersTable extends Migration
     public function up()
     {
         //
-        Schema::create('application_users', function (Blueprint $table) {
+        Schema::create('application_user', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->comment('用户id');
             $table->unsignedInteger('application_id')->comment('项目id');
@@ -36,10 +36,10 @@ class CreateApplicationUsersTable extends Migration
     {
         //
         Schema::table('application_users', function (Blueprint $table) {
-            $table->dropForeign('application_users_user_id_foreign');
-            $table->dropForeign('application_users_application_id_foreign');
-            $table->dropForeign('application_users_application_role_id_foreign');
+            $table->dropForeign('application_user_user_id_foreign');
+            $table->dropForeign('application_user_application_id_foreign');
+            $table->dropForeign('application_user_application_role_id_foreign');
         });
-        Schema::dropIfExists('application_users');
+        Schema::dropIfExists('application_user');
     }
 }
