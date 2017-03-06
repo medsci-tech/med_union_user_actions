@@ -4,6 +4,9 @@ namespace App\Models\MdUser;
 
 use App\Models\Application\Traits\BelongsToManyApplicationsTrait;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\Models\MdUser\MdUser
@@ -26,8 +29,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\MdUser\MdUser whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class MdUser extends Model
+class MdUser extends Authenticatable
 {
+    use HasApiTokens, Notifiable;
     use BelongsToManyApplicationsTrait;
 
     /**
