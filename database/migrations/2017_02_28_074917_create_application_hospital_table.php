@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApplicationHospitalsTable extends Migration
+class CreateApplicationHospitalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateApplicationHospitalsTable extends Migration
     public function up()
     {
         //
-        Schema::create('application_hospitals', function (Blueprint $table) {
+        Schema::create('application_hospital', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('hospital_id')->comment('医院id');
             $table->unsignedInteger('application_id')->comment('项目id');
@@ -33,10 +33,10 @@ class CreateApplicationHospitalsTable extends Migration
     public function down()
     {
         //
-        Schema::table('application_hospitals', function (Blueprint $table) {
-            $table->dropForeign('application_hospitals_hospital_id_foreign');
-            $table->dropForeign('application_hospitals_application_id_foreign');
+        Schema::table('application_hospital', function (Blueprint $table) {
+            $table->dropForeign('application_hospital_hospital_id_foreign');
+            $table->dropForeign('application_hospital_application_id_foreign');
         });
-        Schema::dropIfExists('application_hospitals');
+        Schema::dropIfExists('application_hospital');
     }
 }
