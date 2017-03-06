@@ -2,6 +2,7 @@
 
 namespace App\Models\MdUser;
 
+use App\Models\Application\Traits\BelongsToManyApplicationsTrait;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -27,6 +28,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class MdUser extends Model
 {
+    use BelongsToManyApplicationsTrait;
+
     /**
      * The attributes that are mass assignable.
      *
