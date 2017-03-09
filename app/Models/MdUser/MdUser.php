@@ -4,8 +4,6 @@ namespace App\Models\MdUser;
 
 use App\Models\Application\Traits\BelongsToManyApplicationsTrait;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
@@ -31,7 +29,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class MdUser extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
     use BelongsToManyApplicationsTrait;
 
     /**
