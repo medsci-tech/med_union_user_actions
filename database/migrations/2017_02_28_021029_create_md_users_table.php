@@ -21,8 +21,10 @@ class CreateMdUsersTable extends Migration
             $table->string('name')->nullable()->comment('用户名字');
             $table->string('phone', 11)->unique()->comment('用户电话');
             $table->string('email', 40)->unique()->nullable()->comment('用户邮箱');
-
-            $table->string('password')->nullable()->comment('用户密码');
+            $table->string('province')->nullable()->comment('省');
+            $table->string('city')->nullable()->comment('市');
+            $table->string('area')->nullable()->comment('区');
+            $table->string('password')->nullable()->comment('用户密码 明文');
             $table->timestamps();
 
             $table->foreign('role_id')->references('id')->on('md_roles');
